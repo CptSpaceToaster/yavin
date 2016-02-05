@@ -5,9 +5,9 @@
 ################################################################################
 # Generate a default project configuration file
 project.mk:
-	@echo -e "Generating default project configuration"
-	@echo -e "# Enable colored output from the makefile (true/false)" >> project.mk
-	@echo -e "ENABLE_COLOR := true" >> project.mk
+	@echo  "Generating default project configuration"
+	@echo  "# Enable colored output from the makefile (true/false)" >> project.mk
+	@echo  "ENABLE_COLOR := true" >> project.mk
 
 .PHONY: configure
 configure: project.mk
@@ -20,7 +20,7 @@ configure: project.mk
 PACKAGE := yavin
 
 ifneq ("$(shell which find)","")
-    SOURCES := $(shell find -path "./"$(PACKAGE)"/*.py" -type f -not -path "*/test/*")
+    SOURCES := $(shell find $(PACKAGE) -name "*.py" -type f -not -path "*/test/*")
 else
     $(warning the find utility is not defined in the system path)
 endif
