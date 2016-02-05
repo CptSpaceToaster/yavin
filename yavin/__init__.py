@@ -20,7 +20,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 # Local
-try:
-    #from .subpackage import ModuleName
-except ImportError:
-    pass
+# try:
+    # from .subpackage import ModuleName
+# except ImportError:
+    # pass
