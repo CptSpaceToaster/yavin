@@ -11,9 +11,10 @@ def hello_world():
     return 'Hello World!'
 
 
+@app.route('/bye/')
+def goodbye():
+    return 'Goodbye!'
+
+
 def main():
     app.run()
-
-
-if __name__ == '__main__':
-    main()
